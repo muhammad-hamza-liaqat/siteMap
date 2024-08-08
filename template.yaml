@@ -1,0 +1,49 @@
+AWSTemplateFormatVersion: "2010-09-09"
+Transform: AWS::Serverless-2016-10-31
+Description: "AdminSideSettings"
+Globals:
+  Function:
+    Timeout: 120
+
+Resources:
+  siteMapFunction:
+    Type: AWS::Serverless::Function
+    Properties:
+      CodeUri: siteMapFunction/
+      Handler: app.xmlSiteMapHandler
+      Runtime: nodejs20.x
+      Environment:
+        Variables:
+          API_KEY: "123"
+          STAGE_NAME: "123"
+          AWS_ACCESS_KEY_ID: "123"
+          AWS_SECRET_ACCESS_KEY: "123"
+          AWS_REGION: "123"
+          # AWS_GATEWAY_1:"1qkhxw231f"
+          # AWS_GATEWAY_2:"yxnn8evja6"
+          # AWS_GATEWAY_3:"bjg1bhha32"
+          # AWS_GATEWAY_4:"a76wuh1hld"
+          # AWS_GATEWAY_5:"1xrl6p4fu6"
+          # AWS_GATEWAY_6:"pwtrrli2j5"
+          # AWS_GATEWAY_7:"04oagayqia"
+          # AWS_GATEWAY_8:"5g5siyt23g"
+          # AWS_GATEWAY_9:"r2yz61o671"
+          # AWS_GATEWAY_10:"f6r16jwcc"
+          # AWS_GATEWAY_11:"j7er6sd9zf"
+          # AWS_GATEWAY_12:"49myq7ow91"
+          # AWS_GATEWAY_13:"3ovnmok1t8"
+          # AWS_GATEWAY_14:"4l3av7tz4j"
+          # AWS_GATEWAY_15:"imevpq6i2i"
+          # AWS_GATEWAY_16:"88rp2yqvs2"
+          # AWS_GATEWAY_17:"jk7s6osl3e"
+          # AWS_GATEWAY_18:"uuiqsqx0z4"
+
+          
+      Architectures:
+        - x86_64
+      Events:
+        getSettingsFunctionEvent:
+          Type: Api
+          Properties:
+            Path: /api/xml
+            Method: get
