@@ -1,4 +1,4 @@
-# admin.user.controller aws sam lambda function
+# site.map.controller.js aws sam lambda function
 
 This project contains source code and supporting files for a serverless application that you can deploy with the SAM CLI. It includes the following files and folders.
 
